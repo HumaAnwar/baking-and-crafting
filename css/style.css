@@ -1,0 +1,751 @@
+/* Dark Overlay for Better Readability */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+/* Text Styling */
+.hero-overlay {
+    position: relative;
+    color: white;
+    z-index: 1;
+    max-width: 60%;
+    padding: 20px;
+}
+
+/* Button Style */
+.hero-overlay button {
+    background-color: #F4A261;
+    color: #2C786C;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero-overlay button:hover {
+    background-color: #2C786C;
+    color: white;
+}
+/* ======= Navigation Bar Styling ======= */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: 0.3s ease-in-out;
+}
+
+/* Logo Styling */
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #F4A261; /* Soft orange color */
+    text-transform: uppercase;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 15px;
+    transition: 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+/* Hover Effect */
+.nav-links a:hover {
+    background: #F4A261; /* Soft orange */
+    color: black;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    font-size: 28px;
+    color: white;
+    display: none;
+    cursor: pointer;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 50px;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+/* ======= Smooth Scrolling Effect ======= */
+html {
+    scroll-behavior: smooth;
+}
+/* ======= Scroll Animations ======= */
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* ======= Hero Section ======= */
+.hero {
+    background: url('../images/hero/home-banner.jpg') no-repeat center center/cover;
+    height: 90vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: #fff; /* White text for contrast */
+    padding: 120px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Add shadow for visibility */
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); /* Light shadow for better readability */
+}
+
+/* Add semi-transparent background overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2); /* Dark overlay for contrast */
+    z-index: 1;
+}
+
+/* Ensure text stays above overlay */
+.hero h1, .hero p, .hero .btn {
+    position: relative;
+    z-index: 2;
+}
+
+.btn {
+    background: #ff7f50; /* Coral button for contrast */
+    color: white;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: #e76f51; /* Darker coral on hover */
+}
+
+
+/* ======= About Section Styling ======= */
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: #f9f5f0; /* Light warm color */
+    border-radius: 10px;
+}
+
+.about-content {
+    max-width: 45%;
+    color: #333;
+    line-height: 1.6;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    color: #E76F51;
+    margin-bottom: 10px;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.about-section img {
+    width: 45%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Add spacing between text and image */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content, .about-section img {
+        width: 100%;
+    }
+}
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(50px); /* Start 50px below its original position */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0); /* Move to its original position */
+}
+
+
+/* Wellness Benefits Section */
+.wellness-benefits {
+    text-align: center;
+    padding: 80px 20px;
+    background: #e3e5e7; /* Light blue background for freshness */
+}
+
+/* Section Heading */
+.wellness-benefits h2 {
+    font-size: 2.8rem;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+/* Benefits Container */
+.benefits-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Individual Benefit Box */
+.benefit-box {
+    background: #f9f5f0;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Image Styling */
+.benefit-box img {
+    width: 150px; /* Adjust image size */
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10%; /* Makes the image circular */
+    margin-bottom: 15px;
+}
+
+/* Benefit Title */
+.benefit-box h3 {
+    font-size: 1.6rem;
+    color: #0077b6; /* Blue accent for health theme */
+    margin-bottom: 10px;
+}
+
+/* Benefit Text */
+.benefit-box p {
+    font-size: 1.1rem;
+    color: #414141;
+}
+
+/* Hover Effect */
+.benefit-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .benefits-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* Healthy Recipes Section */
+.recipes-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: #fffaf0;
+}
+
+/* Section Heading */
+.recipes-section h2 {
+    font-size: 2.8rem;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+/* Recipe Grid */
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Recipe Item */
+.recipe-item {
+    text-align: center;
+    width: 100%;
+}
+
+/* Recipe Images */
+.recipe-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Recipe Titles */
+.recipe-item h3 {
+    margin-top: 15px;
+    font-size: 1.6rem;
+    color: #444;
+    font-weight: bold;
+}
+
+/* Hover Effect */
+.recipe-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .recipe-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+
+
+/* Testimonials Section */
+.testimonials {
+    text-align: center;
+    padding: 80px 20px;
+    background: #f9f9f9;
+}
+
+/* Section Heading */
+.testimonials h2 {
+    font-size: 2.8rem;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+/* Testimonial Container */
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Individual Testimonial Box */
+.testimonial-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Testimonial Image */
+.testimonial-box img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #4CAF50;
+}
+
+/* Testimonial Text */
+.testimonial-box p {
+    font-size: 1.2rem;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+/* User Name */
+.testimonial-box h4 {
+    font-size: 1.3rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Hover Effect */
+.testimonial-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Fade-in Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.cta-section {
+    background: linear-gradient(to right, #A8E6CE, #DCEDC1); /* Soft wellness colors */
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.cta-content h2 {
+    font-size: 2rem;
+    color: #2A363B;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+}
+
+.cta-content p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #FF847C;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #E84A5F;
+    transform: scale(1.05);
+}
+.wellness-heading {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f3f3f3;
+}
+
+.wellness-heading h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    margin-top: 60px;
+}
+
+.wellness-heading p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.wellness-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.wellness-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 350px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.wellness-card:hover {
+    transform: scale(1.05);
+}
+
+.wellness-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.wellness-card h3 {
+    margin: 15px 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.wellness-card p {
+    font-size: 1rem;
+    color: #666;
+    padding: 0 15px 15px;
+}
+.faq-heading {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f3f3f3;
+}
+
+.faq-heading h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    margin-top: 90px;
+}
+
+.faq-heading p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.faq-item {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    background: #464646;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 15px;
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question:hover {
+    background: #000000;
+}
+
+.arrow {
+    font-size: 1.5rem;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    font-size: 1rem;
+    color: #333;
+    background: #f9f9f9;
+}
+.contact-heading {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f3f3f3;
+}
+
+.contact-heading h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    margin-top: 70px;
+}
+
+.contact-heading p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
+    margin: 30px auto;
+    gap: 30px;
+    padding: 20px;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 850px;
+    text-align: left;
+    background: #f3f3f3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.contact-info h2 {
+    color: #333;
+
+}
+
+.contact-info p {
+    font-size: 1rem;
+    color: #666;
+    margin: 10px 0;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    background: #f3f3f3;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+
+}
+
+.contact-form h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #3a3a3a;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background: #3a3a3a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #070707;
+}
+
+#form-status {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
+}
+

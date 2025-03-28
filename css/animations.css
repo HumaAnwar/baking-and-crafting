@@ -1,0 +1,44 @@
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide-in from Left */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Bounce Effect */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Apply Animations */
+header {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+nav ul li {
+    animation: slideInLeft 1s ease-out;
+}
+
+button:hover {
+    animation: bounce 0.5s infinite;
+}

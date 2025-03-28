@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
+    <title>Crafting Creations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            text-align: center;
+        }
+
+        /* Heading */
+        .heading {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #333;
+            padding: 20px;
+            margin-top: 90px;
+        }
+
+        /* Crafting Grid */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 40px;
+            margin: 40px;
+            max-width: 1200px;
+        }
+
+        .craft-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin: 15px;
+            overflow: hidden;
+            width: 300px;
+            transition: transform 0.3s;
+        }
+
+        .craft-card:hover {
+            transform: scale(1.05);
+        }
+
+        .craft-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .craft-info {
+            padding: 15px;
+        }
+
+        .craft-info h3 {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .craft-info p {
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Crafting & Baking World</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="baking.html">Baking</a></li>
+                <li><a href="crafting.html">Crafting</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="heading">Artistic Creations</div>
+
+    <div class="container">
+        <div class="craft-card">
+            <img src="images/images (25).jpeg" alt="Handmade Art">
+            <div class="craft-info">
+                <h3>Handmade Art</h3>
+                <p>Explore the uniqueness of carefully crafted art pieces and custom designs.</p>
+            </div>
+        </div>
+        <div class="craft-card">
+            <img src="images/81yTJEnfzeL._UF894,1000_QL80_.jpg" alt="Modern Painting">
+            <div class="craft-info">
+                <h3>Ribbon Bouqet</h3>
+                <p>Experience the beauty of contemporary and abstract art expressions.</p>
+            </div>
+        </div>
+        <div class="craft-card">
+            <img src="images/c0693335da9f9c90961c64996d654c93.jpg" alt="Paper Artwork">
+            <div class="craft-info">
+                <h3>Paper Artwork</h3>
+                <p>Discover the elegance of paper creations, from simple folds to intricate sculptures.</p>
+            </div>
+        </div>
+        <div class="craft-card">
+            <img src="images/6027a4b878a1f2f6d02fb786489ff0cd.jpg" alt="Textile Creations">
+            <div class="craft-info">
+                <h3>Textile Creations</h3>
+                <p>Craft warmth and fashion through unique knitted and woven designs.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
